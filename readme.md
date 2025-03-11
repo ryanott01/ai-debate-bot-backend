@@ -378,7 +378,3 @@ curl -X POST http://localhost:4000/generate \
     }
   }'
 ```
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
