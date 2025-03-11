@@ -11,9 +11,14 @@ class OpenAIProvider(BaseProvider):
             api_key=api_key
         )
         self._models = [
-            {"id": "gpt-3.5-turbo", "name": "GPT-3.5 Turbo"},
-            {"id": "gpt-4", "name": "GPT-4"},
-            {"id": "gpt-4-turbo", "name": "GPT-4 Turbo"}
+            # GPT-4 models
+            {"id": "gpt-4o", "name": "GPT-4o - Latest flagship model"},
+            {"id": "gpt-4-turbo", "name": "GPT-4 Turbo - Strong performance"},
+            {"id": "gpt-4-vision-preview", "name": "GPT-4 Vision - Image capabilities"},
+            {"id": "gpt-4", "name": "GPT-4 - Older stable model"},
+
+            # GPT-3.5 models
+            {"id": "gpt-3.5-turbo", "name": "GPT-3.5 Turbo - Fast and cost-effective"}
         ]
 
     @property

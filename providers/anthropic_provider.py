@@ -8,10 +8,17 @@ class AnthropicProvider(BaseProvider):
     def __init__(self, api_key: str):
         self.client = anthropic.Anthropic(api_key=api_key)
         self._models = [
-            {"id": "claude-3-opus-20240229", "name": "Claude 3 Opus"},
-            {"id": "claude-3-sonnet-20240229", "name": "Claude 3 Sonnet"},
-            {"id": "claude-3-haiku-20240307", "name": "Claude 3 Haiku"},
-            {"id": "claude-3.5-sonnet-20240620", "name": "Claude 3.5 Sonnet"}
+            # Claude 3.7 models (newest)
+            {"id": "claude-3-7-sonnet-20250219", "name": "Claude 3.7 Sonnet - Latest reasoning model"},
+
+            # Claude 3.5 models
+            {"id": "claude-3-5-sonnet-20240620", "name": "Claude 3.5 Sonnet - High performance"},
+            {"id": "claude-3-5-haiku-20240307", "name": "Claude 3.5 Haiku - Fast & efficient"},
+
+            # Claude 3 models
+            {"id": "claude-3-opus-20240229", "name": "Claude 3 Opus - Most powerful"},
+            {"id": "claude-3-sonnet-20240229", "name": "Claude 3 Sonnet - Balanced"},
+            {"id": "claude-3-haiku-20240307", "name": "Claude 3 Haiku - Fast & cost-effective"}
         ]
 
     @property
